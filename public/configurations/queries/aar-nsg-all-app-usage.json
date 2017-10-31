@@ -21,7 +21,7 @@
                         },
                         {
                             "term": {
-                                "{{trafficType:DestinationNSG}}": "{{nsg}}"
+                                "SourceNSG": "{{snsg}}"
                             }
                         }
                     ]

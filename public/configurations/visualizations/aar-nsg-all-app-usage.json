@@ -32,21 +32,5 @@
           "app": "L7Classification"
       }
     }],
-    "filterOptions": {
-        "Traffic Type": {
-            "parameter": "trafficType",
-            "default": "DestinationNSG",
-            "options": [
-                {
-                    "label": "Download",
-                    "value": "DestinationNSG"
-                },
-                {
-                    "label": "Upload",
-                    "value": "SourceNSG"
-                }
-            ]
-        }
-    },
     "query": "aar-nsg-all-app-usage"
 }
