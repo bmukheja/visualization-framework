@@ -37,7 +37,7 @@
     }],
     "filterOptions": {
         "Traffic Type": {
-            "parameter": "trafficType",
+            "parameter": "app_trafficType",
             "default": "EgressBytes",
             "options": [
                 {

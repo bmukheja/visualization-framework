@@ -39,9 +39,9 @@
             "interval": "1h"
           },
           "aggs": {
-            "{{trafficType:DstIp}}": {
+            "{{client_trafficType:DstIp}}": {
               "terms": {
-                "field": "{{trafficType:DstIp}}",
+                "field": "{{client_trafficType:DstIp}}",
                 "size": 5,
                 "order": {
                   "SumofBytes": "desc"

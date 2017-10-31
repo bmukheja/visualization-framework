@@ -16,7 +16,7 @@
             "width": "2px"
         },
         "yTicks": 5,
-        "linesColumn": "{{trafficType:DstIp}}",
+        "linesColumn": "{{client_trafficType:DstIp}}",
         "legend": {
             "orientation": "vertical",
             "show": true,
@@ -24,14 +24,14 @@
             "labelOffset": 5
         },
         "tooltip": [
-            { "column": "{{trafficType:DstIp}}", "label": "Client"},
+            { "column": "{{client_trafficType:DstIp}}", "label": "Client"},
             { "column": "SumofBytes", "label": "Data Usage", "format": ",.2s"},
             { "column": "ts", "label": "Timestamp", "timeFormat": "%b %d, %y %X"}
         ]
     },
     "filterOptions": {
         "Traffic Type": {
-            "parameter": "trafficType",
+            "parameter": "client_trafficType",
             "options": [
                 {
                     "label": "Download",

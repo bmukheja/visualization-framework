@@ -50,7 +50,7 @@
               "aggs": {
                 "SumofBytes": {
                   "sum": {
-                    "field": "{{trafficType:EgressBytes}}"
+                    "field": "{{app_trafficType:EgressBytes}}"
                   }
                 }
               }
