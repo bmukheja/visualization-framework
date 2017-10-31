@@ -29,5 +29,11 @@
             { "column": "ts", "label": "Timestamp", "timeFormat": "%b %d, %y %X"}
         ]
     },
+    "listeners": [
+    {
+        "params": {
+            "app": "L7Classification"
+        }
+    }],
     "query": "aar-enterprise-nsg-app-traffic-detail"
 }
