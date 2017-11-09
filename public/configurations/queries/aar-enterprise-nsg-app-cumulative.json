@@ -21,11 +21,6 @@
                         },
                         {
                             "term": {
-                                "IngressBytes": 0
-                            }
-                        },
-                        {
-                            "term": {
                                 "EnterpriseName": "{{enterpriseName:test_org}}"
                             }
                         },
