@@ -21,6 +21,7 @@
         "yLabel": "Total Bytes",
         "yTickFormat": ".2s",
         "xColumn": "SourceNSG",
+        "stackColumn":"L7Classification",
         "yColumn": "SumofBytes",
         "legend": {
             "show": true,
