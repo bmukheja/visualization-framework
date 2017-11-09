@@ -1,22 +1,26 @@
 import { theme } from "../../../theme"
 
 export const properties = {
-    stroke: {
-        color: "red",
-        width: "2px",
-        opacity: "0.4"
-    },
+    strokeWidth: '2px',
+    opacity: '0.3',
     legend: {
         show: false
     },
     colors: [
+        theme.palette.yellowLightColor,
+        theme.palette.redLightColor,
         theme.palette.orangeLightColor,
         theme.palette.blueLightColor,
         theme.palette.pinkLightColor,
-        theme.palette.orangeLighterColor,
         theme.palette.greenColor,
-        theme.palette.yellowLightColor,
-        theme.palette.yellowDarkColor,
+        theme.palette.mauveColor,
+        theme.palette.greenDarkerColor,
+        theme.palette.redBlindColor,
+        theme.palette.peach,
+        theme.palette.darkCyan,
+        theme.palette.lightBrown,
+        theme.palette.blueviolet,
+        theme.palette.aquaLightColor
     ],
     zeroStart: true,
     circleRadius: 5,
