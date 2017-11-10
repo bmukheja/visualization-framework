@@ -14,7 +14,7 @@
             "#b3d645"
         ],
         "tooltip": [
-            { "column": "SourceNSG", "label": "NSG" },
+            { "column": "L7Classification", "label": "NSG" },
             { "column": "SumofBytes", "label": "Total Bytes", "format": ",.2s"}
         ],
         "xLabel": "NSG",
