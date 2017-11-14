@@ -4,7 +4,7 @@
     "creationDate": "09/29/2016",
     "title": "AAR Enterprise ({{enterpriseName}}) Dashboard",
     "visualizations": [
-        { "id": "test_bharat",     "x": 0,  "y": 0, "w": 5,  "h": 14, "minW": 4, "minH": 10, "static": true}
+        { "id": "aar-enterprise-nsg-per-app",     "x": 0,  "y": 0, "w": 5,  "h": 14, "minW": 4, "minH": 10, "static": true}
 
     ],
     "links": [
