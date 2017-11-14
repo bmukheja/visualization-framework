@@ -1,5 +1,5 @@
 {
-    "id": "aar-enterprise-nsg-per-app",
+    "id": "aar-enterprise-app-per-nsg",
     "title": "Data Usage per NSG for an App",
     "service": "elasticsearch",
     "query": {
