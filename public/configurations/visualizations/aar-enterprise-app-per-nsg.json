@@ -32,7 +32,7 @@
     },
     "listeners": [{
       "params": {
-          "srcNSG": "SourceNSG"
+          "snsg": "SourceNSG"
       }
     }],
     "query": "aar-enterprise-app-per-nsg"
