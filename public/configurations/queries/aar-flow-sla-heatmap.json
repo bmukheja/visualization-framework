@@ -56,16 +56,23 @@
                         "field": "timestamp",
                         "interval": "{{heatmapinterval:30s}}"
                     },
-                    "aggs": {
-                        "application": {
+                    "aggs":{
+                        "appGroupId":{
                             "terms": {
-                                "field": "Application"
+                                "field": "AppGroupID"
                             },
                             "aggs": {
-                                "slastatus": {
+                                "application": {
                                     "terms": {
-                                        "size": 1,
-                                        "field": "SlaStatus"
+                                        "field": "Application"
+                                    },
+                                    "aggs": {
+                                        "slastatus": {
+                                            "terms": {
+                                                "size": 1,
+                                                "field": "SlaStatus"
+                                            }
+                                        }
                                     }
                                 }
                             }
