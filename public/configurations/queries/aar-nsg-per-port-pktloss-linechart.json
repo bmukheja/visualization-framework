@@ -38,11 +38,6 @@
                             "term": {
                                 "DstUplink": "primary1"
                             }
-                        },
-                        {
-                            "term": {
-                                "AppGroupId": "{{appGroupId}}"
-                            }
                         }
                     ]
                 }
