@@ -1,0 +1,68 @@
+{
+    "id":"aar-nsg-per-port-pktloss-linechart",
+    "title":"TBD",
+    "service":"elasticsearch",
+    "query":{
+        "index":"{{index:nuage_dpi_probestats}}",
+        "type":"{{type:nuage_doc_type}}",
+        "body":{
+            "size":0,
+            "query":{
+                "bool":{
+                    "must":[
+                        {
+                            "range":{
+                                "timestamp":{
+                                    "gte":"{{startTime:now-24h}}",
+                                    "lte":"{{endTime:now}}",
+                                    "format":"epoch_millis"
+                                }
+                            }
+                        },
+                        {
+                            "term": {
+                                 "EnterpriseName": "{{enterpriseName:test_org}}"
+                             }
+                        },
+                        {
+                            "term": {
+                                "SourceNSG": "{{snsg:ovs-0}}"
+                            }
+                        },
+                        {
+                            "term": {
+                                "SrcUplink": "primary1"
+                            }
+                        },
+                        {
+                            "term": {
+                                "DstUplink": "primary1"
+                            }
+                        },
+                        {
+                            "term": {
+                                "AppGroupId": "{{appGroupId}}"
+                            }
+                        }
+                    ]
+                }
+            },
+            "aggs": {
+                "ts": {
+                    "date_histogram": {
+                        "field": "timestamp",
+                        "interval": "{{interval:1h}}"
+                    },
+                    "aggs": {
+                        "PktLoss": {
+                            "terms": {
+                                "field": "AvgPktLoss"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

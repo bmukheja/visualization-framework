@@ -1,0 +1,51 @@
+{
+    "id": "aar-nsg-per-port-delay-linechart",
+    "graph": "LineGraph",
+    "title": "",
+    "description": "",
+    "author": "Bharat Mukheja",
+    "creationDate": "11/17/2017",
+    "data": {
+        "dateHistogram": true,
+        "xColumn": "ts",
+        "yColumn": "SumOf",
+        "yTickFormat": ".2s",
+        "xLabel": "Time",
+        "yLabel": "Delay",
+        "stroke": {
+          "color": "#f76159",
+          "width": "2px"
+        },
+        "colors": [
+            "#6b94ec",
+            "#e78ac3",
+            "#f9b13d",
+            "#b3d645",
+            "#ffd92f",
+            "#aa97f2",
+            "#f76159",
+            "#d9d9d9"
+        ],
+        "tooltip": [
+            { "column": "Delay" }
+        ]
+    },
+    "filterOptions": {
+        "Metric": {
+            "parameter": "metric",
+            "default": "TotalBytesCount",
+            "options": [
+                {
+                    "label": "Total Bytes",
+                    "value": "TotalBytesCount",
+                    "default": true
+                },
+                {
+                    "label": "Total Packets",
+                    "value": "TotalPacketsCount"
+                }
+            ]
+        }
+    },
+    "query": "aar-nsg-per-port-delay-linechart"
+}
