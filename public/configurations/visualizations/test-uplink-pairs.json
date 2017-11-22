@@ -1,0 +1,21 @@
+{
+    "id": "test-uplink-pairs",
+    "graph": "Table",
+    "title": "",
+    "description": "Shows all medals of the olympic games of the year",
+    "author": "Christophe SERAFIN",
+    "creationDate": "12/21/2016",
+    "query": "test-uplink-pairs",
+    "listeners": [{
+      "params": {
+          "srcUplink": "srcUplink",
+          "dstUplink": "dstUplink"
+      }
+    }],
+    "data": {
+        "columns": [
+            { "column": "srcUplink", "label": "Source"},
+            { "column": "dstUplink", "label": "Destination" }
+        ]
+    }
+}
