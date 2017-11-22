@@ -26,17 +26,22 @@
                         },
                         {
                             "term": {
-                                "SourceNSG": "{{snsg:ovs-0}}"
+                                "SourceNSG": "{{snsg}}"
                             }
                         },
                         {
                             "term": {
-                                "SrcUplink": "{{srcUplink:primary1}}"
+                                "DestinationNSG": "{{dnsg}}"
                             }
                         },
                         {
                             "term": {
-                                "DstUplink": "{{dstUplink:primary1}}"
+                                "SrcUplink": "{{srcUplink}}"
+                            }
+                        },
+                        {
+                            "term": {
+                                "DstUplink": "{{dstUplink}}"
                             }
                         }
                     ]
