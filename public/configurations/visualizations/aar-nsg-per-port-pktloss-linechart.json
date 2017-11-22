@@ -30,22 +30,5 @@
             { "column": "PktLoss" }
         ]
     },
-    "filterOptions": {
-        "Metric": {
-            "parameter": "metric",
-            "default": "TotalBytesCount",
-            "options": [
-                {
-                    "label": "Total Bytes",
-                    "value": "TotalBytesCount",
-                    "default": true
-                },
-                {
-                    "label": "Total Packets",
-                    "value": "TotalPacketsCount"
-                }
-            ]
-        }
-    },
     "query": "aar-nsg-per-port-pktloss-linechart"
 }
