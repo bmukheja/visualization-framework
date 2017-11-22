@@ -8,7 +8,7 @@
     "data": {
         "dateHistogram": true,
         "xColumn": "ts",
-        "yColumn": "SumOf",
+        "yColumn": "Jitter",
         "yTickFormat": ".2s",
         "xLabel": "Time",
         "yLabel": "Jitter",

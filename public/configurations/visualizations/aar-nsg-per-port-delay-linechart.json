@@ -8,7 +8,7 @@
     "data": {
         "dateHistogram": true,
         "xColumn": "ts",
-        "yColumn": "SumOf",
+        "yColumn": "Delay",
         "yTickFormat": ".2s",
         "xLabel": "Time",
         "yLabel": "Delay",

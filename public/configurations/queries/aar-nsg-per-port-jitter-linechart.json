@@ -50,7 +50,7 @@
                     },
                     "aggs": {
                         "Jitter": {
-                            "terms": {
+                            "avg": {
                                 "field": "AvgJitter"
                             }
                         }
