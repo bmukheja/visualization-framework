@@ -31,12 +31,12 @@
                         },
                         {
                             "term": {
-                                "SrcUplink": "primary1"
+                                "SrcUplink": "{{srcUplink:primary1}}"
                             }
                         },
                         {
                             "term": {
-                                "DstUplink": "primary1"
+                                "DstUplink": "{{dstUplink:primary1}}"
                             }
                         }
                     ]
