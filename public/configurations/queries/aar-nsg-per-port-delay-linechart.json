@@ -58,6 +58,11 @@
                             "avg": {
                                 "field": "AvgDelay"
                             }
+                        },
+                        "ConfigDelay":{
+                            "avg":{
+                                "field":"ConfigAvgDelay"
+                            }
                         }
                     }
                 }

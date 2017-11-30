@@ -58,6 +58,11 @@
                             "avg": {
                                 "field": "AvgJitter"
                             }
+                        },
+                        "ConfigJitter":{
+                            "avg":{
+                                "field":"ConfigAvgJitter"
+                            }
                         }
                     }
                 }

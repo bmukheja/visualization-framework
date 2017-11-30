@@ -58,6 +58,11 @@
                             "avg": {
                                 "field": "AvgPktLoss"
                             }
+                        },
+                        "ConfigPktLoss":{
+                            "avg": {
+                                "field": "ConfigAvgPktLoss"
+                            }
                         }
                     }
                 }
