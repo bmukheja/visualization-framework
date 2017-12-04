@@ -13,6 +13,7 @@
       }
     }],
     "data": {
+        "searchBar": false,
         "columns": [
             { "column": "srcUplink", "label": "Source"},
             { "column": "dstUplink", "label": "Destination" }
