@@ -530,6 +530,9 @@ class SimulateProbeStats(object):
                         probe_record["AvgDelay"] = float(avg_latency)
                         probe_record["AvgJitter"] = float(avg_jitter)
                         probe_record["AvgPktLoss"] = float(avg_pktloss)
+                        probe_record["ConfigAvgDelay"] = 200.0
+                        probe_record["ConfigAvgJitter"] = 50.0
+                        probe_record["ConfigAvgPktLoss"] = 50.0
                         probe_record["Domain"] = domains[domain]
                         probe_record["EnterpriseName"] = self.def_ent_name
                         probe_record["ControlSessionState"] = self.contro_states[0]
