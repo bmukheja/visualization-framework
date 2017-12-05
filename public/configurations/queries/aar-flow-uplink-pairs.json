@@ -28,6 +28,11 @@
                             "term": {
                                 "DestinationNSG": "{{dnsg}}"
                             }
+                        },
+                        {
+                            "term": {
+                                "APPGroup": "{{appGroup}}"
+                            }
                         }
                     ]
                 }
