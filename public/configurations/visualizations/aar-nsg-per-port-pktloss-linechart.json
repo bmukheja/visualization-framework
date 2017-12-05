@@ -8,17 +8,17 @@
     "data": {
         "dateHistogram": true,
         "xColumn": "ts",
-        "yColumn": ["PktLoss","ConfigPktLoss"],
+        "yColumn": ["PacketLoss","Configured SLA PacketLoss"],
         "yTickFormat": ".2s",
         "xLabel": "Time",
         "yLabel": "Packet Loss",
-        "linesColumn": ["PktLoss","ConfigPktLoss"],
+        "linesColumn": ["PacketLoss","Configured SLA PacketLoss"],
         "stroke": {
           "color": "#f76159",
           "width": "2px"
         },
         "legend": {
-            "orientation": "vertical",
+            "orientation": "horizontal",
             "show": true,
             "circleSize": 5,
             "labelOffset": 5
@@ -28,8 +28,8 @@
             "#000000"
             ],
         "tooltip": [
-            { "column": "PktLoss","label":"Actual Packet Loss" },
-            { "column": "ConfigPktLoss","label":"Configured SLA Packet Loss" }
+            { "column": "PacketLoss","label":"Actual Packet Loss" },
+            { "column": "Configured SLA PacketLoss","label":"Configured SLA Packet Loss" }
         ]
     },
     "query": "aar-nsg-per-port-pktloss-linechart"

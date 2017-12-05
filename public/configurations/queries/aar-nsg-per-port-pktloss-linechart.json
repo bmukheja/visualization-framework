@@ -49,12 +49,12 @@
                         "interval": "{{interval:1h}}"
                     },
                     "aggs": {
-                        "PktLoss": {
+                        "PacketLoss": {
                             "avg": {
                                 "field": "AvgPktLoss"
                             }
                         },
-                        "ConfigPktLoss":{
+                        "Configured SLA PacketLoss":{
                             "avg": {
                                 "field": "ConfigAvgPktLoss"
                             }

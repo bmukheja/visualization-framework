@@ -54,7 +54,7 @@
                                 "field": "AvgJitter"
                             }
                         },
-                        "ConfigJitter":{
+                        "Configured SLA Jitter":{
                             "avg":{
                                 "field":"ConfigAvgJitter"
                             }

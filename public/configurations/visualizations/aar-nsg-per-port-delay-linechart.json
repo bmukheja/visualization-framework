@@ -8,11 +8,11 @@
     "data": {
         "dateHistogram": true,
         "xColumn": "ts",
-        "yColumn": ["Delay","ConfigDelay"],
+        "yColumn": ["Delay","Configured SLA Delay"],
         "yTickFormat": ".2s",
         "xLabel": "Time",
         "yLabel": "Delay",
-        "linesColumn":["Delay","ConfigDelay"],
+        "linesColumn":["Delay","Configured SLA Delay"],
         "stroke": {
           "color": "#f76159",
           "width": "2px"
@@ -22,14 +22,14 @@
             "#000000"
             ],
         "legend": {
-            "orientation": "vertical",
+            "orientation": "horizontal",
             "show": true,
             "circleSize": 5,
             "labelOffset": 5
         },
         "tooltip": [
             { "column": "Delay","label":"Actual Delay" },
-            { "column": "ConfigDelay","label":"Configured SLA Delay" }
+            { "column": "Configured SLA Delay","label":"Configured SLA Delay" }
         ]
     },
     "query": "aar-nsg-per-port-delay-linechart"

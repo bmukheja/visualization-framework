@@ -8,17 +8,17 @@
     "data": {
         "dateHistogram": true,
         "xColumn": "ts",
-        "yColumn": ["Jitter","ConfigJitter"],
+        "yColumn": ["Jitter","Configured SLA Jitter"],
         "yTickFormat": ".2s",
         "xLabel": "Time",
         "yLabel": "Jitter",
-        "linesColumn":["Jitter","ConfigJitter"],
+        "linesColumn":["Jitter","Configured SLA Jitter"],
         "stroke": {
           "color": "#f76159",
           "width": "2px"
         },
         "legend": {
-            "orientation": "vertical",
+            "orientation": "horizontal",
             "show": true,
             "circleSize": 5,
             "labelOffset": 5
@@ -29,7 +29,7 @@
             ],
         "tooltip": [
             { "column": "Jitter","label":"Actual Jitter" },
-            { "column": "ConfigJitter","label":"Configured SLA Jitter" }
+            { "column": "Configured SLA Jitter","label":"Configured SLA Jitter" }
         ]
     },
     "query": "aar-nsg-per-port-jitter-linechart"

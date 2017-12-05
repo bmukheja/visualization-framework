@@ -54,7 +54,7 @@
                                 "field": "AvgDelay"
                             }
                         },
-                        "ConfigDelay":{
+                        "Configured SLA Delay":{
                             "avg":{
                                 "field":"ConfigAvgDelay"
                             }
