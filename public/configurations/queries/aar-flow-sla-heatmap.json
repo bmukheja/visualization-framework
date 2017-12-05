@@ -57,9 +57,9 @@
                         "interval": "{{heatmapinterval:30s}}"
                     },
                     "aggs":{
-                        "appGroupId":{
+                        "appGroup":{
                             "terms": {
-                                "field": "AppGroupID"
+                                "field": "APPGroup"
                             },
                             "aggs": {
                                 "application": {
