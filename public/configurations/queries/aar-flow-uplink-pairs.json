@@ -1,5 +1,5 @@
 {
-    "id": "test-uplink-pairs",
+    "id": "aar-flow-uplink-pairs",
     "title": "TBD",
     "service": "elasticsearch",
     "query": {
@@ -17,6 +17,16 @@
                                     "lte": "{{endTime:now}}",
                                     "format": "epoch_millis"
                                 }
+                            }
+                        },
+                        {
+                            "term": {
+                                "SourceNSG": "{{snsg}}"
+                            }
+                        },
+                        {
+                            "term": {
+                                "DestinationNSG": "{{dnsg}}"
                             }
                         }
                     ]

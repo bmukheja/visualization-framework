@@ -1,11 +1,11 @@
 {
-    "id": "test-uplink-pairs",
+    "id": "aar-flow-uplink-pairs",
     "graph": "Table",
     "title": "",
-    "description": "Shows all medals of the olympic games of the year",
-    "author": "Christophe SERAFIN",
-    "creationDate": "12/21/2016",
-    "query": "test-uplink-pairs",
+    "description": "Shows all uplink pairs for the flow",
+    "author": "Bharat Mukheja",
+    "creationDate": "11/21/2017",
+    "query": "aar-flow-uplink-pairs",
     "listeners": [{
       "params": {
           "srcUplink": "srcUplink",
@@ -14,6 +14,8 @@
     }],
     "data": {
         "searchBar": false,
+        "hidePagination":true,
+        "limit":20,
         "columns": [
             { "column": "srcUplink", "label": "Source"},
             { "column": "dstUplink", "label": "Destination" }
