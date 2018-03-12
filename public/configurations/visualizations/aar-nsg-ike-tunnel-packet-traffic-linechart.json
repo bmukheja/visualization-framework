@@ -1,0 +1,55 @@
+{
+    "id": "aar-nsg-ike-tunnel-packet-traffic-linechart",
+    "graph": "MultiLineGraph",
+    "title": "Traffic for {{tunnel}}",
+    "description": "Line graph displays the throughput of the tunnel over the selected path",
+    "author": "Bharat Mukheja",
+    "creationDate": "3/6/2018",
+    "data": {
+        "dateHistogram": true,
+        "xColumn": "ts",
+        "yColumn": "{{ikePacketTypeColumn}}",
+        "yTickFormat": ".2s",
+        "xLabel": "Time",
+        "yLabel": "{{ikePacketType}} Packets",
+        "linesColumn": "{{ikePacketTypeColumn}}",
+        "showNull": false,
+        "stroke": {
+          "color": "#f76159",
+          "width": "2px"
+        },
+        "legend": {
+            "orientation": "horizontal",
+            "show": true,
+            "circleSize": 5,
+            "labelOffset": 5
+        },
+        "tooltip": [
+            { "column": "yColumn","label":"Traffic" }
+        ]
+    },
+    "query": "aar-nsg-ike-tunnel-packet-traffic-linechart",
+    "filterOptions": {
+        "Packet Type": {
+            "parameter": "ikePacketType",
+            "default": "Tx",
+            "options": [
+                {
+                    "label": "Tx",
+                    "value": "Tx",
+                    "default": true,
+                    "forceOptions": {
+                        "ikePacketTypeColumn": "TxPacketsCount"
+                    }
+                },
+                {
+                    "label": "Rx",
+                    "value": "Rx",
+                    "forceOptions": {
+                        "ikePacketTypeColumn": "RxPacketsCount"
+                    }
+                }
+            ]
+        }
+    }
+}
