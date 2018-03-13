@@ -10,6 +10,7 @@
         "xColumn": "date_histo",
         "xLabel": "Time",
         "yTickGrid": false,
+        "yColumn":"tunnel",
         "yLabel": "Destination",
         "legendColumn": "TunnelState",
         "cellColumn": "TunnelState",
