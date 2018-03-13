@@ -39,11 +39,6 @@
                                     "term": {
                                         "SourceNSG":"{{snsg}}"
                                      }
-                                },
-                                {
-                                    "term": {
-                                        "TunnelName": "{{tunnel}}"
-                                    }
                                 }
                             ]
                         }

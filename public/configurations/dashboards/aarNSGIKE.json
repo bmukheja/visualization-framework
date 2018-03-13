@@ -4,10 +4,9 @@
     "creationDate": "3/6/2018",
     "title": "AAR NSG ({{snsg}}) IKE",
     "visualizations": [
-        { "id": "aar-nsg-ike-tunnel-heatmap",           "x": 2, "y": 0,  "w": 10, "h": 15, "minW": 5, "minH": 10, "static": true},
-        { "id": "aar-nsg-ike-all-tunnels",              "x": 0, "y": 0,  "w": 2, "h": 30, "minW": 2, "minH": 10, "static": true},
-        { "id": "aar-nsg-ike-tunnel-detail-table",      "x": 2, "y": 15,  "w": 10, "h": 15, "minW": 5, "minH": 10, "static": true},
-        { "id": "aar-nsg-ike-tunnel-traffic-linechart", "x": 0, "y": 30,  "w": 12, "h": 15, "minW": 5, "minH": 5, "static": true},
+        { "id": "aar-nsg-ike-tunnel-heatmap",           "x": 0, "y": 0,  "w": 12, "h": 15, "minW": 5, "minH": 10, "static": true},
+        { "id": "aar-nsg-ike-tunnel-detail-table",      "x": 0, "y": 15,  "w": 12, "h": 15, "minW": 5, "minH": 10, "static": true},
+        { "id": "aar-nsg-ike-tunnel-packet-traffic-linechart", "x": 0, "y": 30,  "w": 6, "h": 15, "minW": 5, "minH": 5, "static": true},
         { "id": "aar-nsg-ike-tunnel-bytes-traffic-linechart", "x": 6, "y": 30,  "w": 6, "h": 15, "minW": 5, "minH": 5, "static": true},
         { "id": "aar-nsg-ike-probe-heatmap",            "x": 0, "y": 45,  "w": 12, "h": 15, "minW": 5, "minH": 5, "static": true},
         { "id": "aar-nsg-ike-probe-tier1-detail-table",       "x": 0, "y": 60,  "w": 12, "h": 15, "minW": 5, "minH": 5, "static": true}
