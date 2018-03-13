@@ -39,6 +39,14 @@
                     }
                 }
             }
+        },
+        "aggs":{
+        "date_histo":{
+            "date_histogram": {
+                        "field": "timestamp",
+                        "interval": "2m"
+                }
+            }
         }
     }
 }
