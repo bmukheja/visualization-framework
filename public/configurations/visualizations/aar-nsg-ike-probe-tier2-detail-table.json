@@ -1,0 +1,17 @@
+{
+    "id": "aar-nsg-ike-probe-detail-table",
+    "graph": "Table",
+    "title": "",
+    "author": "Bharat Mukheja",
+    "creationDate": "3/6/2018",
+    "data": {
+        "searchBar": false,
+        "hidePagination":false,
+        "columns": [
+            { "column": "Tier2URLInfo.UrlString","label":"URL String"},
+            { "column": "Tier2URLInfo.UrlState","label":"URL State","colors":{"UP":"green","DOWN":"red"} },
+            { "column": "Tier2URLInfo.UrlFailureReason", "label": "Failure Reason(If Any)"}
+        ]
+    },
+    "query": "aar-nsg-ike-probe-detail-table"
+}
