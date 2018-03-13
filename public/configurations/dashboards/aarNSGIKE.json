@@ -9,7 +9,7 @@
         { "id": "aar-nsg-ike-tunnel-packet-traffic-linechart", "x": 0, "y": 30,  "w": 6, "h": 15, "minW": 5, "minH": 5, "static": true},
         { "id": "aar-nsg-ike-tunnel-bytes-traffic-linechart", "x": 6, "y": 30,  "w": 6, "h": 15, "minW": 5, "minH": 5, "static": true},
         { "id": "aar-nsg-ike-probe-heatmap",            "x": 0, "y": 45,  "w": 12, "h": 15, "minW": 5, "minH": 5, "static": true},
-        { "id": "aar-nsg-ike-probe-tier1-detail-table",       "x": 0, "y": 60,  "w": 12, "h": 15, "minW": 5, "minH": 5, "static": true}
+        { "id": "aar-nsg-ike-probe-tier1-detail-table",       "x": 0, "y": 60,  "w": 12, "h": 15, "minW": 5, "minH": 5, "static": true},
         { "id": "aar-nsg-ike-probe-tier2-detail-table",       "x": 0, "y": 75,  "w": 12, "h": 15, "minW": 5, "minH": 5, "static": true}
     ],
     "links": [
