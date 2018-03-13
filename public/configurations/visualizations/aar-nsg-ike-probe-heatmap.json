@@ -1,7 +1,7 @@
 {
     "id": "aar-nsg-ike-probe-heatmap",
     "graph": "HeatmapGraph",
-    "title": "{{tunnel}} Probe Status",
+    "title": "Probe Status",
     "description": "",
     "author": "Bharat Mukheja",
     "creationDate": "3/6/2018",
@@ -11,7 +11,7 @@
         "xLabel": "Time",
         "yColumn": "TunnelName",
         "yTickGrid": false,
-        "yLabel": "Destination",
+        "yLabel": "Tunnel Probes",
         "legendColumn": "ProbeState",
         "cellColumn": "ProbeState",
         "heatmapColor": {
