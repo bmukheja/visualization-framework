@@ -1,0 +1,46 @@
+{
+    "id": "aar-nsg-ike-probe-heatmap",
+    "graph": "HeatmapGraph",
+    "title": "{{tunnel}} Probe Status",
+    "description": "",
+    "author": "Bharat Mukheja",
+    "creationDate": "3/6/2018",
+    "key": "function(d) { return d['dnsg'] + d['date_histo'];}",
+    "data": {
+        "xColumn": "date_histo",
+        "xLabel": "Time",
+        "yColumn": "TunnelName",
+        "yTickGrid": false,
+        "yLabel": "Destination",
+        "legendColumn": "ProbeState",
+        "cellColumn": "ProbeState",
+        "heatmapColor": {
+            "UP": "#b3d645",
+            "HOLDDOWN": "#faf78e",
+            "DOWN": "#f76159",
+            "UNKNOWN": "#d9d9d9"
+        },
+        "legend": {
+            "show": true,
+            "orientation": "horizontal",
+            "circleSize": 4,
+            "labelOffset": 2
+        },
+        "tooltip": [
+            { "column": "date_histo", "label": "Timestamp", "timeFormat": "%b %d, %y %X"},
+            { "column": "ProbeState", "label": "Probe State" }
+            { "column": "Tier1State", "label": "Tier 1 State" }
+            { "column": "Tier2State", "label": "Tier 2 State" }
+        ]
+   },
+   "listeners": [
+        {
+            "params": {
+                "ike_probe_timestamp": "date_histo",
+                "queryStartTime": "date_histo"
+            }
+        }
+    ],
+    "nextPrevFilter": true,
+    "query": "aar-nsg-ike-probe-heatmap"
+}
