@@ -21,11 +21,6 @@
                         },
                         {
                             "term": {
-                                "EnterpriseName": "{{enterpriseName}}"
-                            }
-                        },
-                        {
-                            "term": {
                                 "SourceNSG": "{{snsg}}"
                             }
                         }

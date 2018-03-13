@@ -23,11 +23,6 @@
                         },
                         {
                             "term": {
-                                 "EnterpriseName": "{{enterpriseName:test_org}}"
-                            }
-                        },
-                        {
-                            "term": {
                                 "SourceNSG": "{{snsg}}"
                             }
                         },
