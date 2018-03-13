@@ -7,7 +7,7 @@
     "creationDate": "3/6/2018",
     "key": "function(d) { return d['dnsg'] + d['date_histo'];}",
     "data": {
-        "xColumn": "timestamp",
+        "xColumn": "date_histo",
         "xLabel": "Time",
         "yColumn": "TunnelName",
         "yTickGrid": false,
@@ -36,8 +36,8 @@
    "listeners": [
         {
             "params": {
-                "ike_probe_timestamp": "timestamp",
-                "queryStartTime": "timestamp"
+                "ike_probe_timestamp": "date_histo",
+                "queryStartTime": "date_histo"
             }
         }
     ],
