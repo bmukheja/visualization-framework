@@ -1,0 +1,28 @@
+{
+    "id": "aar-nsg-ike-tunnel-detail-table",
+    "graph": "Table",
+    "title": "IKE Tunnel Status Events",
+    "author": "Bharat Mukheja",
+    "creationDate": "3/6/2018",
+    "data": {
+        "searchBar": false,
+        "hidePagination":false,
+        "columns": [
+            { "column": "timestamp","label":"Time Stamp","timeFormat": "%b %d, %y %X" },
+            { "column": "ProbeIPSecIP","label":"Probe IPSec IP Addr" },
+            { "column": "ProbeIPSecPort", "label": "Probe IPSec Port"},
+            { "column": "ProbeVxLanIP", "label": "Probe VxLan IP Addr" },
+            { "column": "ProbeVxLanPort", "label": "Probe VxLan Port" },
+            { "column": "VscIPSecIP","label":"VSC IPSec IP Addr" },
+            { "column": "VscIPSecPort", "label": "VSC IPSec Port"},
+            { "column": "VscVxLanIP", "label": "VSC VxLan IP Addr" },
+            { "column": "VscVxLanPort", "label": "VSC VxLan Port" },
+            { "column": "SrcUplink", "label": "Source Uplink" },
+            { "column": "SrcUplinkIndex", "label": "Source Uplink Index" },
+            { "column": "DstUplink", "label": "Destination Uplink" },
+            { "column": "DstUplinkIndex", "label": "Destination Uplink Index" },
+            { "column": "Reason", "label": "Change Reason" }
+        ]
+    },
+    "query": "aar-nsg-ike-tunnel-detail-table"
+}
