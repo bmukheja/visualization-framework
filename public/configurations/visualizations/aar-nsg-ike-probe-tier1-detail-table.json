@@ -1,5 +1,5 @@
 {
-    "id": "aar-nsg-ike-probe-detail-table",
+    "id": "aar-nsg-ike-probe-tier1-detail-table",
     "graph": "Table",
     "title": "",
     "author": "Bharat Mukheja",
@@ -13,5 +13,5 @@
             { "column": "Tier1URLInfo.UrlFailureReason", "label": "Failure Reason(If Any)"}
         ]
     },
-    "query": "aar-nsg-ike-probe-detail-table"
+    "query": "aar-nsg-ike-probe-tier1-detail-table"
 }
