@@ -1,5 +1,5 @@
 {
-    "id":"aar-nsg-ike-tunnel-bytes-traffic-linechart",
+    "id":"aar-nsg-ike-tunnel-packet-bytes-linechart",
     "title":"TBD",
     "service":"elasticsearch",
     "query":{
@@ -9,6 +9,7 @@
             "sort":{
               "timestamp":"desc"
             },
+	    "size":0,
             "query":{
                   "bool":{
                     "must":[
@@ -25,15 +26,33 @@
                             "term": {
                                 "SourceNSG": "{{snsg}}"
                             }
-                        },
-                        {
-                            "term": {
-                                "TunnelName": "{{tunnel}}"
-                            }
                         }
                     ]
+                }
+            },
+            "aggs":{
+        "date_histo":{
+            "date_histogram": {
+                        "field": "timestamp",
+                        "interval": "1m"
+                },
+                "aggs":{
+                    "tunnel":{
+                        "terms":{
+                            "field":"TunnelName"
+                        },
+                        "aggs":{
+                            "{{ikeBytesTypeColumn}}":{
+                                "sum":{
+                                    "field":"{{ikeBytesTypeColumn}}"
+                                    }
+                        }
+                    }
                 }
             }
         }
     }
 }
+}
+}
+
