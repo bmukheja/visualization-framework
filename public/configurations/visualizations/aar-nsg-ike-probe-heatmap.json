@@ -9,7 +9,7 @@
     "data": {
         "xColumn": "date_histo",
         "xLabel": "Time",
-        "yColumn": "TunnelName",
+        "yColumn": "tunnel",
         "yTickGrid": false,
         "yLabel": "Tunnel Probes",
         "legendColumn": "ProbeState",
@@ -27,7 +27,7 @@
             "labelOffset": 2
         },
         "tooltip": [
-            { "column": "timestamp", "label": "Timestamp", "timeFormat": "%b %d, %y %X"},
+            { "column": "date_histo", "label": "Timestamp", "timeFormat": "%b %d, %y %X"},
             { "column": "ProbeState", "label": "Probe State" },
             { "column": "Tier1State", "label": "Tier 1 State" },
             { "column": "Tier2State", "label": "Tier 2 State" }

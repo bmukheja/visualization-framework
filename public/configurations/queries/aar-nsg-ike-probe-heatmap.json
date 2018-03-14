@@ -6,7 +6,8 @@
         "index": "{{index:nuage_ike_probe_status}}",
         "type": "{{type:nuage_doc_type}}",
         "body": {
-            "sort": [
+            "size":0,
+		"sort": [
                 {
                     "timestamp": {
                         "order": "desc"
@@ -33,20 +34,47 @@
                                     "term": {
                                         "SourceNSG":"{{snsg}}"
                                      }
-                                }
-                            ]
+                                }                            ]
                         }
                     }
                 }
-            }
-        },
-        "aggs":{
+            },
+"aggs":{
         "date_histo":{
             "date_histogram": {
                         "field": "timestamp",
                         "interval": "2m"
+                },
+                "aggs":{
+                    "tunnel":{
+                        "terms":{
+                            "field":"TunnelName"
+                        },
+                        "aggs":{
+                            "ProbeState":{
+                                "terms":{
+                                "field":"ProbeState"
+                                                                },
+                            "aggs":{
+                                "Tier1State":{
+                                    "terms":{
+                                        "field":"Tier1State"
+                                    },
+                                    "aggs":{
+                                        "Tier2State":{
+                                            "terms":{
+                                                "field":"Tier2State"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
     }
+}
+}
 }
