@@ -1,18 +1,18 @@
 {
     "id": "aar-nsg-ike-tunnel-packet-traffic-linechart",
     "graph": "MultiLineGraph",
-    "title": "Traffic for {{tunnel}}",
+    "title": "Packet Count",
     "description": "Line graph displays the throughput of the tunnel over the selected path",
     "author": "Bharat Mukheja",
     "creationDate": "3/6/2018",
     "data": {
         "dateHistogram": true,
-        "xColumn": "ts",
+        "xColumn": "date_histo",
         "yColumn": "{{ikePacketTypeColumn}}",
         "yTickFormat": ".2s",
         "xLabel": "Time",
         "yLabel": "{{ikePacketType}} Packets",
-        "linesColumn": "{{ikePacketTypeColumn}}",
+        "linesColumn": "tunnel",
         "showNull": false,
         "stroke": {
           "color": "#f76159",
@@ -25,7 +25,8 @@
             "labelOffset": 5
         },
         "tooltip": [
-            { "column": "yColumn","label":"Traffic" }
+            { "column": "yColumn","label":"Packet Count" },
+	    { "column": "linesColumn","label":"Tunnel"}
         ]
     },
     "query": "aar-nsg-ike-tunnel-packet-traffic-linechart",
