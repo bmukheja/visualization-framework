@@ -1,18 +1,18 @@
 {
-    "id": "aar-nsg-ike-tunnel-bytes-traffic-linechart",
-    "graph": "LineGraph",
-    "title": "Traffic for {{tunnel}}",
+    "id": "aar-nsg-ike-tunnel-packet-bytes-linechart",
+    "graph": "MultiLineGraph",
+    "title": "Total Bytes",
     "description": "Line graph displays the throughput of the tunnel over the selected path",
     "author": "Bharat Mukheja",
     "creationDate": "3/6/2018",
     "data": {
         "dateHistogram": true,
-        "xColumn": "ts",
+        "xColumn": "date_histo",
         "yColumn": "{{ikeBytesTypeColumn}}",
         "yTickFormat": ".2s",
         "xLabel": "Time",
-        "yLabel": "{{ikeBytesType}} Bytes",
-        "linesColumn": "{{ikeBytesTypeColumn}}",
+        "yLabel": "{{ikeBytesType}} Packets",
+        "linesColumn": "tunnel",
         "showNull": false,
         "stroke": {
           "color": "#f76159",
@@ -25,12 +25,13 @@
             "labelOffset": 5
         },
         "tooltip": [
-            { "column": "yColumn","label":"Traffic" }
+            { "column": "yColumn","label":"Total Bytes" },
+	    { "column": "linesColumn","label":"Tunnel"}
         ]
     },
     "query": "aar-nsg-ike-tunnel-bytes-traffic-linechart",
     "filterOptions": {
-        "Bytes Type": {
+        "Packet Type": {
             "parameter": "ikeBytesType",
             "default": "Tx",
             "options": [
