@@ -3,7 +3,7 @@
     "title":"NAT Probe Results at time",
     "service":"elasticsearch",
     "query":{
-        "index":"{{index:nuage_ike_probe_status}}",
+        "index":"{{index:nuage_ike_probestats}}",
         "type":"{{type:nuage_doc_type}}",
         "body":{
             "sort": [
