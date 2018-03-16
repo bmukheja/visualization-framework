@@ -8,20 +8,14 @@
         "searchBar": false,
         "hidePagination":false,
         "columns": [
+            { "column": "TunnelState","label":"","colors":{"UP":"green","DOWN":"red"} },
             { "column": "timestamp","label":"Time Stamp","timeFormat": "%b %d, %y %X" },
-            { "column": "ProbeIPSecIP","label":"Probe IPSec IP Addr" },
-            { "column": "ProbeIPSecPort", "label": "Probe IPSec Port"},
-            { "column": "ProbeVxLanIP", "label": "Probe VxLan IP Addr" },
-            { "column": "ProbeVxLanPort", "label": "Probe VxLan Port" },
-            { "column": "VscIPSecIP","label":"VSC IPSec IP Addr" },
-            { "column": "VscIPSecPort", "label": "VSC IPSec Port"},
-            { "column": "VscVxLanIP", "label": "VSC VxLan IP Addr" },
-            { "column": "VscVxLanPort", "label": "VSC VxLan Port" },
-            { "column": "SrcUplink", "label": "Source Uplink" },
-            { "column": "SrcUplinkIndex", "label": "Source Uplink Index" },
-            { "column": "DstUplink", "label": "Destination Uplink" },
-            { "column": "DstUplinkIndex", "label": "Destination Uplink Index" },
-            { "column": "Reason", "label": "Change Reason" }
+            { "column": "SrcNSG","label":"Source NSG DPID" },
+            { "column": "TunnelID", "label": "Tunnel ID"},
+            { "column": "SourceNSG", "label": "Source NSG Name" },
+            { "column": "TunnelName", "label": "Tunnel Name" },
+            { "column": "TunnelState","label":"Tunnel State" },
+            { "column": "MultipleStatesChanged", "label": "Multiple States Changed?"}
         ]
     },
     "query": "aar-nsg-ike-tunnel-detail-table"

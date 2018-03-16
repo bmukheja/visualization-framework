@@ -1,12 +1,11 @@
 {
     "id":"aar-nsg-ike-tunnel-detail-table",
-    "title":"NAT Probe Results at time",
+    "title":"NAT Tunnel Events at time",
     "service":"elasticsearch",
     "query":{
-        "index":"{{index:nuage_natt}}",
+        "index":"{{index:nuage_ike_tunnel_status}}",
         "type":"{{type:nuage_doc_type}}",
         "body":{
-            "size": "{{ts_size:4}}",
             "sort": [
                 {
                     "timestamp": {
@@ -23,7 +22,8 @@
                                 {
                             "range": {
                                 "timestamp": {
-                                    "lte": "{{event_timestamp}}",
+                                    "lte": "{{ike_tunnel_timestamp}}",
+                                    "gte": "{{ike_tunnel_timestamp}}||-2m",
                                     "format": "epoch_millis"
                                 }
                             }
@@ -34,15 +34,10 @@
                             }
                         },
                         {
-                            "term":{
-                                "DestinationNSG":"{{dnsg}}"
+                            "term": {
+                                "TunnelName": "{{tunnel}}"
                             }
-                        },
-                                {
-                                    "exists":{
-                                        "field":"Reason"
-                                    }
-                                }
+                        }
                             ]
                         }
                     }
