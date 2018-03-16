@@ -1,11 +1,11 @@
 {
-    "id":"aar-nsg-ike-probe-tier2-detail-table",
-    "title":"IKE Tier2 URL state table",
-    "service":"elasticsearch",
-    "query":{
-        "index":"{{index:nuage_ike_probestats}}",
-        "type":"{{type:nuage_doc_type}}",
-        "body":{
+    "id": "aar-nsg-ike-probe-tier2-detail-table",
+    "title": "IKE Tier2 URL state table",
+    "service": "elasticsearch",
+    "query": {
+        "index": "{{index:nuage_ike_probestats}}",
+        "type": "{{type:nuage_doc_type}}",
+        "body": {
             "size": "1",
             "sort": [
                 {
@@ -17,27 +17,57 @@
             "query": {
                 "bool": {
                     "filter": {
-                        "bool":{
-                            "must":[
+                        "bool": {
+                            "must": [
                                 {
-                            "range": {
-                                "timestamp": {
-                                    "lte": "{{ike_probe_timestamp}}",
-                                    "format": "epoch_millis"
+                                    "range": {
+                                        "timestamp": {
+                                            "lte": "{{ike_probe_timestamp}}",
+                                            "gte": "{{ike_probe_timestamp}}||-2m",
+                                            "format": "epoch_millis"
+                                        }
+                                    }
+                                },
+                                {
+                                    "term": {
+                                        "SourceNSG": "{{snsg}}"
+                                    }
+                                },
+                                {
+                                    "term": {
+                                        "TunnelName": "{{tunnel}}"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "aggs": {
+                "date_histo": {
+                    "date_histogram": {
+                        "field": "timestamp",
+                        "interval": "2m"
+                    },
+                    "aggs": {
+                        "urls": {
+                            "terms": {
+                                "field": "Tier2URLInfo.UrlString"
+                            },
+                            "aggs": {
+                                "state": {
+                                    "terms": {
+                                        "field": "Tier2URLInfo.UrlState"
+                                    },
+                                    "aggs": {
+                                        "failure": {
+                                            "terms": {
+                                                "field": "Tier2URLInfo.UrlFailureReason"
+                                            }
+                                        }
+                                    }
                                 }
                             }
-                        },
-                        {
-                            "term":{
-                                "SourceNSG":"{{snsg}}"
-                            }
-                        },
-                        {
-                            "term":{
-                                "TunnelName":"{{tunnel}}"
-                            }
-                        }
-                            ]
                         }
                     }
                 }
