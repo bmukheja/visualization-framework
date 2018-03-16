@@ -37,7 +37,8 @@
         {
             "params": {
                 "ike_probe_timestamp": "date_histo",
-                "queryStartTime": "date_histo"
+                "queryStartTime": "date_histo",
+                "tunnel":"yColumn"
             }
         }
     ],
