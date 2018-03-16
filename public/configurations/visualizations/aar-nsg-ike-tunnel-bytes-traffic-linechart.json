@@ -25,7 +25,7 @@
             "labelOffset": 5
         },
         "tooltip": [
-            { "column": "yColumn","label":"Total Bytes" },
+            { "column": "yColumn","label":"Total Bytes","format": ",.2s" },
 	    { "column": "linesColumn","label":"Tunnel"}
         ]
     },
