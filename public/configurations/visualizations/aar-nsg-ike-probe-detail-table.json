@@ -1,0 +1,26 @@
+{
+    "id": "aar-nsg-ike-probe-detail-table",
+    "graph": "Table",
+    "title": "IKE Probe Status Events",
+    "author": "Bharat Mukheja",
+    "creationDate": "3/6/2018",
+    "data": {
+        "searchBar": false,
+        "hidePagination":false,
+        "columns": [
+            { "column": "ProbeStatus","label":"","colors":{"GREEN":"green","RED":"red","BLUE":"blue","YELLOW":"yellow","GRAY":"grey","WHITE":"white"} },
+            { "column": "timestamp","label":"Time Stamp","timeFormat": "%b %d, %y %X" },
+            { "column": "SrcNSG","label":"Source NSG DPID" },
+            { "column": "TunnelName", "label": "Tunnel Name"},
+            { "column": "ProbeID", "label": "Probe ID"},
+            { "column": "ProbeName", "label": "Probe Name"},
+            { "column": "SourceNSG", "label": "Source NSG Name" },
+            { "column": "TunnelName", "label": "Tunnel Name" },
+            { "column": "ProbeState","label":"Probe State" },
+            { "column": "Tier1State","label":"Tier1 State" },
+            { "column": "Tier2State","label":"Tier2 State" },
+            { "column": "MultipleStatesChanged", "label": "Multiple States Changed?"}
+        ]
+    },
+    "query": "aar-nsg-ike-probe-detail-table"
+}
