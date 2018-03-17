@@ -8,6 +8,7 @@
         "searchBar": false,
         "hidePagination":false,
         "columns": [
+            { "column": "date_histo","label":"Timestamp"},
             { "column": "urls","label":"URL String"},
             { "column": "state","label":"URL State","colors":{"UP":"green","DOWN":"red"} },
             { "column": "failure", "label": "Failure Reason(If Any)"}
