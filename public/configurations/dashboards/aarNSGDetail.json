@@ -26,7 +26,7 @@
             "url": "/dashboards/aarNSGNATTEvents"
         },
         {
-            "label": "IKE Stats",
+            "label": "IKE",
             "url": "/dashboards/aarNSGIKE"
         }
     ],

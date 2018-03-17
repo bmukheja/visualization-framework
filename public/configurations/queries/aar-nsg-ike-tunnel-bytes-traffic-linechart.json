@@ -1,5 +1,5 @@
 {
-    "id":"aar-nsg-ike-tunnel-packet-bytes-linechart",
+    "id":"aar-nsg-ike-tunnel-bytes-traffic-linechart",
     "title":"TBD",
     "service":"elasticsearch",
     "query":{

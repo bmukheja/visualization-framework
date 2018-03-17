@@ -1,5 +1,5 @@
 {
-    "id": "aar-nsg-ike-tunnel-packet-bytes-linechart",
+    "id": "aar-nsg-ike-tunnel-bytes-traffic-linechart",
     "graph": "MultiLineGraph",
     "title": "Total Bytes",
     "description": "Line graph displays the throughput of the tunnel over the selected path",
