@@ -2,7 +2,7 @@
     "id": "aar-nsg-ike-tunnel-heatmap",
     "graph": "HeatmapGraph",
     "title": "{{snsg}} NSG {{tunnel}} Tunnel Status",
-    "description": "Heatmap showing IKE Tunnel status history.",
+    "description": "Heatmap showing IKE Tunnel status history. GREEN: Tunnel UP, RED: Tunnel Down",
     "author": "Bharat Mukheja",
     "creationDate": "3/6/2018",
     "key": "function(d) { return d['dnsg'] + d['date_histo'];}",
@@ -16,9 +16,7 @@
         "cellColumn": "TunnelState",
         "heatmapColor": {
             "UP": "#b3d645",
-            "HOLDDOWN": "#faf78e",
-            "DOWN": "#f76159",
-            "UNKNOWN": "#d9d9d9"
+            "DOWN": "#f76159"
         },
         "legend": {
             "show": true,
