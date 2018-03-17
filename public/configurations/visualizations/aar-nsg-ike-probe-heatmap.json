@@ -1,8 +1,8 @@
 {
     "id": "aar-nsg-ike-probe-heatmap",
     "graph": "HeatmapGraph",
-    "title": "Probe Status",
-    "description": "",
+    "title": "Probe Status for all Tunnels",
+    "description": "GREEN : Probe is Up, RED : Probe is Down, BLUE : Probe is in HOLD DOWN, GRAY : Probe has stopped, WHITE : There is no data for Probe, YELLOW : Probe has gone through Multiple State changes and is in Unstable state.",
     "author": "Bharat Mukheja",
     "creationDate": "3/6/2018",
     "key": "function(d) { return d['dnsg'] + d['date_histo'];}",
@@ -12,13 +12,15 @@
         "yColumn": "tunnel",
         "yTickGrid": false,
         "yLabel": "Tunnel Probes",
-        "legendColumn": "ProbeState",
-        "cellColumn": "ProbeState",
+        "legendColumn": "ProbeStatus",
+        "colorColumn": "ProbeStatus",
         "heatmapColor": {
             "UP": "#b3d645",
-            "HOLDDOWN": "#faf78e",
+            "UNSTABLE": "#faf78e",
             "DOWN": "#f76159",
-            "UNKNOWN": "#d9d9d9"
+            "STOPPED": "#d9d9d9",
+            "UNKNOWN": "white",
+            "HOLD_DOWN": "lightBlue"
         },
         "legend": {
             "show": true,

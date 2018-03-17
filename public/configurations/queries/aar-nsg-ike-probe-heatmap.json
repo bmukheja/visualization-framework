@@ -54,7 +54,7 @@
                             "ProbeState":{
                                 "terms":{
                                 "field":"ProbeState"
-                                                                },
+                                },
                             "aggs":{
                                 "Tier1State":{
                                     "terms":{
@@ -64,6 +64,16 @@
                                         "Tier2State":{
                                             "terms":{
                                                 "field":"Tier2State"
+                                            },
+                                            "aggs":{
+                                                "ProbeStatus":{
+                                                    "terms": {
+                              "script": {
+                                "lang":"painless",
+                                "inline": "doc['MultipleStatesChanged'].value== 'true'? 'UNSTABLE':doc['ProbeStatus'].value== 'GRAY'? 'STOPPED': doc['ProbeState'].value"
+                              }
+                            }
+                                                }
                                             }
                                         }
                                     }
