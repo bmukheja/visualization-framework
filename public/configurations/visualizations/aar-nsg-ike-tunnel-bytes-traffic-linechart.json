@@ -25,8 +25,9 @@
             "labelOffset": 5
         },
         "tooltip": [
+            { "column": "tunnel","label":"Tunnel"},
             { "column": "yColumn","label":"Total Bytes","format": ",.2s" },
-	    { "column": "linesColumn","label":"Tunnel"}
+            { "column": "throughput","label":"Throughput(B/s)","format": ",.4n" }
         ]
     },
     "query": "aar-nsg-ike-tunnel-bytes-traffic-linechart",

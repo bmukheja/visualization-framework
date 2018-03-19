@@ -46,6 +46,12 @@
                                 "sum":{
                                     "field":"{{ikePacketTypeColumn}}"
                                     }
+                        },
+                            "throughput":{
+                                "sum":{
+                                    "script":{
+                                        "inline":"doc['{{ikeBytesTypeColumn}}'].value/60.0"}
+                                    }
                         }
                     }
                 }
