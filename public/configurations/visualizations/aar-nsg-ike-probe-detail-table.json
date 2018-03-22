@@ -16,7 +16,7 @@
             { "column": "Tier1State","label":"Tier1 State" },
             { "column": "Tier2State","label":"Tier2 State" },
             { "column": "RoundRobinState","label":"Round Robin State" },
-            { "column": "MultipleStatesChanged", "label": "Flapping"}
+            { "column": "MultipleStatesChanged", "label": "Flapping","colors":{"true":"green","false":"red"}}
         ]
     },
     "query": "aar-nsg-ike-probe-detail-table"
