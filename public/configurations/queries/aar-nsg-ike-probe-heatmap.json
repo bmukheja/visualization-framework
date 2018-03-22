@@ -1,5 +1,5 @@
 {
-    "id": "aar-nsg-natt-heatmap",
+    "id": "aar-nsg-nsg-ike-probe-heatmap",
     "title": "NAT-T Reachability HeatMap",
     "service": "elasticsearch",
     "query": {
