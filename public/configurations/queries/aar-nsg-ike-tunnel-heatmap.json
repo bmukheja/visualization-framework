@@ -1,5 +1,5 @@
 {
-    "id": "aar-nsg-natt-heatmap",
+    "id": "aar-nsg-ike-tunnel-heatmap",
     "title": "NAT-T Reachability HeatMap",
     "service": "elasticsearch",
     "query": {
@@ -52,11 +52,13 @@
                                 "field": "TunnelName"
                             },
                             "aggs":{
-                                "TunnelState":{
-                                    "terms":{
-                                        "field":"TunnelState"
+                                "TunnelState": {
+                                    "terms": {
+                                      "script": {
+                                        "inline": "doc['MultipleStatesChanged'].value==true?'UNSTABLE':doc['TunnelState']"
+                                      }
                                     }
-                                }
+                                  }
                             }
                         }
                     }
