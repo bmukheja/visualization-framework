@@ -8,7 +8,7 @@
         "searchBar": false,
         "hidePagination":false,
         "columns": [
-            { "column": "ProbeState","label":"","colors":{"UP":"green","DOWN":"red"} },
+            { "column": "ProbeState","label":"","colors":{"UP":"green","DOWN":"red","UNKNOWN": "white","HOLD_DOWN": "lightBlue" }},
             { "column": "timestamp","label":"Time Stamp","timeFormat": "%b %d, %y %X" },
             { "column": "TunnelName", "label": "Tunnel Name"},
             { "column": "ProbeName", "label": "Probe Name"},
