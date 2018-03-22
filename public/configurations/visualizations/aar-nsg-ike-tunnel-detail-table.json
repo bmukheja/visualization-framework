@@ -15,7 +15,7 @@
             { "column": "SourceNSG", "label": "Source NSG Name" },
             { "column": "TunnelName", "label": "Tunnel Name" },
             { "column": "TunnelState","label":"Tunnel State" },
-            { "column": "MultipleStatesChanged", "label": "Multiple States Changed?"}
+            { "column": "MultipleStatesChanged", "label": "Flapping"}
         ]
     },
     "query": "aar-nsg-ike-tunnel-detail-table"
