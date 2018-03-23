@@ -6,6 +6,7 @@
         "index":"{{index:nuage_ike_probestats}}",
         "type":"{{type:nuage_doc_type}}",
         "body":{
+            "size":4,
             "sort": [
                 {
                     "timestamp": {
@@ -22,7 +23,6 @@
                             "range": {
                                 "timestamp": {
                                     "lte": "{{ike_probe_timestamp}}",
-                                    "gte": "{{ike_probe_timestamp}}||-2m",
                                     "format": "epoch_millis"
                                 }
                             }

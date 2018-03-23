@@ -1,7 +1,7 @@
 {
     "id": "aar-nsg-ike-probe-detail-table",
     "graph": "Table",
-    "title": "IKE Probe Status Events",
+    "title": "Last 4 IKE Probe Status Events",
     "author": "Bharat Mukheja",
     "creationDate": "3/6/2018",
     "data": {
@@ -19,5 +19,12 @@
             { "column": "MultipleStatesChanged", "label": "Flapping","colors":{"true":"green","false":"red"}}
         ]
     },
+    "listeners": [
+        {
+            "params": {
+                "ikeProbeDetailTimestamp": "timestamp"
+            }
+        }
+    ],
     "query": "aar-nsg-ike-probe-detail-table"
 }

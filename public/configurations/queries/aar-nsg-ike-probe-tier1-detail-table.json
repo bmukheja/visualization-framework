@@ -22,8 +22,8 @@
                                 {
                                     "range": {
                                         "timestamp": {
-                                            "lte": "{{ike_probe_timestamp}}",
-                                            "gte": "{{ike_probe_timestamp}}||-2m",
+                                            "lte": "{{ikeProbeDetailTimestamp}}",
+                                            "gte": "{{ikeProbeDetailTimestamp}}||-2m",
                                             "format": "epoch_millis"
                                         }
                                     }
