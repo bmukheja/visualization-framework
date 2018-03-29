@@ -42,35 +42,6 @@
                         }
                     }
                 }
-            },
-            "aggs": {
-                "date_histo": {
-                    "date_histogram": {
-                        "field": "timestamp",
-                        "interval": "2m"
-                    },
-                    "aggs": {
-                        "urls": {
-                            "terms": {
-                                "field": "Tier1URLInfo.UrlString"
-                            },
-                            "aggs": {
-                                "state": {
-                                    "terms": {
-                                        "field": "Tier1URLInfo.UrlState"
-                                    },
-                                    "aggs":{
-                                        "failure":{
-                                            "terms":{
-                                                "field":"Tier1URLInfo.UrlFailureReason"
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
             }
         }
     }
