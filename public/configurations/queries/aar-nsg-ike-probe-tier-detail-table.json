@@ -1,9 +1,9 @@
 {
-    "id": "test_tabify",
-    "title": "IKE Tier1 URL state table",
+    "id": "aar-nsg-ike-probe-tier-detail-table",
+    "title": "IKE Tier URL state table",
     "service": "elasticsearch",
     "query": {
-        "index": "{{index:sample_index}}",
+        "index": "{{index:nuage_ike_probestats}}",
         "type": "{{type:nuage_doc_type}}",
         "body": {
             "size": "1",
@@ -22,8 +22,20 @@
                                 {
                                     "range": {
                                         "timestamp": {
-                                           "format": "epoch_millis"
+                                            "lte": "{{ikeProbeDetailTimestamp}}",
+                                            "gte": "{{ikeProbeDetailTimestamp}}",
+                                            "format": "epoch_millis"
                                         }
+                                    }
+                                },
+                                {
+                                    "term": {
+                                        "SourceNSG": "{{snsg}}"
+                                    }
+                                },
+                                {
+                                    "term": {
+                                        "TunnelName": "{{tunnel}}"
                                     }
                                 }
                             ]
