@@ -22,7 +22,7 @@
                                 {
                             "range": {
                                 "timestamp": {
-                                    "lte": "{{ike_probe_timestamp}}",
+                                    "lte": "{{ike_probe_timestamp}}||+30s",
                                     "format": "epoch_millis"
                                 }
                             }
