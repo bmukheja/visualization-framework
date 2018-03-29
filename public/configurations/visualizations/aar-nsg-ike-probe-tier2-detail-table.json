@@ -9,9 +9,9 @@
         "hidePagination":false,
         "columns": [
              { "column": "timestamp","label":"Time","timeFormat": "%b %d, %y %X"},
-            { "column": "Tier2URLInfo.UrlString","label":"Tier1 URL String"},
-            { "column": "Tier2URLInfo.UrlState","label":"Tier1 URL State","colors":{"UP":"green","DOWN":"red"} },
-            { "column": "Tier2URLInfo.UrlFailureReason ", "label": "Tier1 Failure Reason (If Any)"}
+            { "column": "Tier2URLInfo.UrlString","label":"Tier2 URL String"},
+            { "column": "Tier2URLInfo.UrlState","label":"Tier2 URL State","colors":{"UP":"green","DOWN":"red"} },
+            { "column": "Tier2URLInfo.UrlFailureReason ", "label": "Tier2 Failure Reason (If Any)"}
         ]
     },
     "query": "aar-nsg-ike-probe-tier2-detail-table"
