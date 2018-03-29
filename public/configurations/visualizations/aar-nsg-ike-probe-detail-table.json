@@ -1,15 +1,15 @@
 {
     "id": "aar-nsg-ike-probe-detail-table",
     "graph": "Table",
-    "title": "Last 4 IKE Probe Status Events",
+    "title": "Last 8 IKE Probe Status Events at {{ike_probe_timestamp}}",
     "author": "Bharat Mukheja",
-    "description": "Flapping: True if probe has gone through multiple state change within 30sec",
+    "description": "Flapping: True if probe has gone through multiple state change within 30sec, ProbeState => GREEN : Probe is Up, RED : Probe is Down, BLUE : Probe is in HOLD DOWN",
     "creationDate": "3/6/2018",
     "data": {
         "searchBar": false,
         "hidePagination":false,
         "columns": [
-            { "column": "ProbeState","label":"","colors":{"UP":"green","DOWN":"red","UNKNOWN": "white","HOLD_DOWN": "lightBlue" }},
+            { "column": "ProbeState","label":"","colors":{"UP":"green","DOWN":"red","UNKNOWN": "white","HOLD_DOWN": "Blue" }},
             { "column": "timestamp","label":"Time","timeFormat": "%b %d, %y %X" },
             { "column": "TunnelName", "label": "Tunnel Name"},
             { "column": "ProbeName", "label": "Probe Name"},
