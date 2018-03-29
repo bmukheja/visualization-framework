@@ -1,7 +1,7 @@
 {
     "id": "aar-nsg-ike-probe-detail-table",
     "graph": "Table",
-    "title": "Last 8 IKE Probe Status Events at {{ike_probe_timestamp}}",
+    "title": "Last 8 IKE Probe Status Events",
     "author": "Bharat Mukheja",
     "description": "Flapping: True if probe has gone through multiple state change within 30sec, ProbeState => GREEN : Probe is Up, RED : Probe is Down, BLUE : Probe is in HOLD DOWN",
     "creationDate": "3/6/2018",
