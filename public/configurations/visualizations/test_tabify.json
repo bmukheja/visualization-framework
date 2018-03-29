@@ -1,0 +1,40 @@
+{
+    "id": "test_tabify",
+    "graph": "Table",
+    "title": "Medals the olympic games {{year:2012}}",
+    "description": "Shows all medals of the olympic games of the year",
+    "author": "Christophe SERAFIN",
+    "creationDate": "12/21/2016",
+    "query": "test_tabify",
+    "data": {
+        "columns": [
+            { "column": "timestamp","label":"Time","timeFormat": "%b %d, %y %X"},
+            { "column": "Tier1State","label":"Tier 1 State"},
+            { "column": "TunnelID","label":"Tunnel ID"},
+            { "column": "Tier1URLInfo.UrlString","label":"URL String"},
+            { "column": "Tier1URLInfo.UrlState","label":"URL State","colors":{"UP":"green","DOWN":"red"} },
+            { "column": "Tier1URLInfo.UrlFailureReason", "label": "Failure Reason(If Any)"}
+        ]
+    },
+    "filterOptions": {
+        "Medal": {
+            "parameter": "medalType",
+            "default": "Gold",
+            "options": [
+                {
+                    "label": "Gold",
+                    "value": "Gold"
+                },
+                {
+                    "label": "Silver",
+                    "value": "Silver"
+                },
+                {
+                    "label": "Bronze",
+                    "value": "Bronze",
+                    "disabled": true
+                }
+            ]
+        }
+    }
+}

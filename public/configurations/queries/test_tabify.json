@@ -1,0 +1,36 @@
+{
+    "id": "test_tabify",
+    "title": "IKE Tier1 URL state table",
+    "service": "elasticsearch",
+    "query": {
+        "index": "{{index:sample_index}}",
+        "type": "{{type:nuage_doc_type}}",
+        "body": {
+            "size": "1",
+            "sort": [
+                {
+                    "timestamp": {
+                        "order": "desc"
+                    }
+                }
+            ],
+            "query": {
+                "bool": {
+                    "filter": {
+                        "bool": {
+                            "must": [
+                                {
+                                    "range": {
+                                        "timestamp": {
+                                           "format": "epoch_millis"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
