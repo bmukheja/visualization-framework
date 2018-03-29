@@ -26,7 +26,7 @@
         "tooltip": [
             { "column": "tunnel","label":"Tunnel"},
             { "column": "yColumn","label":"Total {{ikeTrafficLabel}}","format": ",.2s" },
-            { "column": "throughput","label":"Throughput({{ikeTrafficLabel}}/s)","format": ",.4n" }
+            { "column": "throughput","label":"Throughput({{ikeTrafficLabel}}/s)","format": ",.3s" }
         ]
     },
     "query": "aar-nsg-ike-tunnel-traffic-linechart",
