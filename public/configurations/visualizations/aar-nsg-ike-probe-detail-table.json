@@ -3,7 +3,7 @@
     "graph": "Table",
     "title": "Last 8 IKE Probe Status Events",
     "author": "Bharat Mukheja",
-    "description": "Flapping: True if probe has gone through multiple state change within 30sec, ProbeState => GREEN : Probe is Up, RED : Probe is Down, BLUE : Probe is in HOLD DOWN",
+    "description": "Detailed Events table for last 8 events occured on the Probe selected on the heatmap.\n\nFlapping Column = 'true' if probe has gone through multiple state change within 30sec \n\nFor the ProbeStates:\nGREEN => Probe is Up \nRED => Probe is Down \nBLUE => Probe is in HOLD DOWN",
     "creationDate": "3/6/2018",
     "data": {
         "searchBar": false,

@@ -2,7 +2,7 @@
     "id": "aar-nsg-ike-probe-heatmap",
     "graph": "HeatmapGraph",
     "title": "Probe Status for all Tunnels on {{snsg}}",
-    "description": "GREEN : Probe is Up, RED : Probe is Down, BLUE : Probe is in HOLD DOWN, GRAY : Probe has stopped, WHITE : There is no data for Probe, YELLOW : Probe has gone through Multiple State changes.",
+    "description": "Heatmap showing IKE Probe status history. \n\n1. GREEN : Probe is Up\n2. RED : Probe is Down\n3. GRAY : Probe has stopped\n4. BLUE : Probe is in HOLD DOWN\n5. WHITE : There is no data for Probe\n6. YELLOW : Probe has gone through Multiple State changes.",
     "author": "Bharat Mukheja",
     "creationDate": "3/6/2018",
     "key": "function(d) { return d['tunnel'] + d['date_histo'];}",
