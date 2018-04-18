@@ -15,9 +15,9 @@
         "legendColumn": "TunnelState",
         "cellColumn": "TunnelState",
         "heatmapColor": {
-            "UP": "#b3d645",
-            "DOWN": "#f76159",
-            "UNSTABLE":"#faf78e"
+            "UP": "#7ace4d",
+            "UNSTABLE": "#ffbb44",
+            "DOWN": "#f3264c"
         },
         "legend": {
             "show": true,
