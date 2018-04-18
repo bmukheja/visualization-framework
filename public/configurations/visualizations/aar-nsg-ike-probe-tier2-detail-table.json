@@ -2,7 +2,7 @@
     "id": "aar-nsg-ike-probe-tier2-detail-table",
     "graph": "Table",
     "title": "{{tunnel}} Tier2 URL events at {{ikeProbeDetailTimestamp:call('time_convert')}}",
-    "description":"Table gives IKE Tunnel Tier2 events for the timestamp clicked in Probe Events detail table.\n\nGreen => URL is reachable.\nRed => URL is unreachable\nEmpty => URL has not been probed in the 30 secs interval",
+    "description":"Table gives IKE Tunnel Tier2 events for the timestamp clicked in Probe Events detail table.\n\nGray: Not probed yet\nGreen => URL is reachable.\nRed => URL is unreachable",
     "author": "Bharat Mukheja",
     "creationDate": "3/6/2018",
     "data": {
@@ -10,7 +10,7 @@
         "hidePagination":true,
         "columns": [
              { "column": "Tier2URLInfo.UrlString","label":"Tier2 URL String"},
-            { "column": "Tier2URLInfo.UrlState","label":"Tier2 URL State","colors":{"UP":"green","DOWN":"red"} },
+            { "column": "Tier2URLInfo.UrlState","label":"Tier2 URL State","colors":{"UP":"green","DOWN":"red","NOT_PROBED":"gray"} },
             { "column": "Tier2URLInfo.UrlFailureReason ", "label": "Tier2 Failure Reason (If Any)"}
         ]
     },
