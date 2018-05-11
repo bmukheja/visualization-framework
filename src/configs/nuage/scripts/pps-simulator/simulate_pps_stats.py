@@ -1063,8 +1063,8 @@ class SimulateIKEStats(object):
 
     def attachProbesToNsgs(self):
         for nsg in self.nsgs:
-            tunnelNames = self.tunnels
-            self.tunnels = self.getTunnelsAndProbesDetails(tunnelNames)
+            tunnelNames = nsg['ike_tunnel_names']
+            nsg['tunnels'] = self.getTunnelsAndProbesDetails(tunnelNames)
         return
 
 
