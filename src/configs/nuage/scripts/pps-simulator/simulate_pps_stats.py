@@ -1032,6 +1032,13 @@ class SimulateIKEStats(object):
         tier1 = random.sample(urls,t1_count)
         tier2 = random.sample(urls-set(tier1),t2_count)
         return tier1,tier2
+
+    def getUrlTimeline(self,startTime,endTime):
+        #Select a random number between 1 and 6(randomly chosen upper limit). Select this many 'change' timestamps during the duration of the timeline
+        changes = randint(0,6)
+        timesteps = [random.uniform(startTime,endTime) for _ in range(changes)]
+        reasons = random.sample(self.urlFailureReasons,changes/2)
+        return (timesteps,reasons)
 def main():
     #  Load the configuration file
     config = ConfigParser.ConfigParser()
