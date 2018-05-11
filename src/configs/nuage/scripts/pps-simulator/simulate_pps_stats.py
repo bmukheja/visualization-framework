@@ -25,6 +25,7 @@ class SimulateAARData(object):
         self.perf_mon_count = defData["perf_mon_count"]
         self.duc_count = defData["duc_count"]
         self.out_sla_app_count = defData['out_sla_app_count']
+        self.ike_tunnel_count = defData['ike_tunnel_count']
 
     def getRandomCidrPrefix(self):
         blockOne = random.randrange(1, 255, 1)
@@ -32,9 +33,13 @@ class SimulateAARData(object):
         blockThree = random.randrange(1, 255, 1)
         return str(blockOne) + "." + str(blockTwo) + "." + str(blockThree) + "."
 
+    def getIkeTunnels(self):
+        return ["tunnel-{0}".format(num) for num in range(self.ike_tunnel_count)]
+
     def getNSGIds(self):
         i = 0
         nsgids = []
+        tunnels = self.getIkeTunnels()
         while i < self.nsg_count:
             #nsg_subnet_cidr = self.getRandomCidrPrefix()
             nsg_subnet_cidr = self.nsg_id_prefix
@@ -43,12 +48,21 @@ class SimulateAARData(object):
             #nsg_last_octet = str(randint(2, 254))
             nsg_last_octet = str(i)
             nsg_ip = nsg_subnet_cidr + nsg_last_octet
+
+            #Ike tunnels
+            if self.ike_tunnel_count<self.nsg_count:
+                ike_tunnels = tunnels
+            elif i<self.nsg_count-1:
+                ike_tunnels = tunnels[i]
+            else:
+                ike_tunnels = tunnels[i:]
             nsg = {
                 "nsg_subnet": nsg_subnet_cidr,
                 "nsg_id": nsg_ip,
                 "nsg_name": "ovs-" + nsg_last_octet,
                 "nsg_natt_ip":nsg_natt_cidr + nsg_last_octet,
-                "nsg_natt_port":nsg_natt_port
+                "nsg_natt_port":nsg_natt_port,
+                'ike_tunnel_names': ike_tunnels
             }
             nsgids.append(nsg)
             i += 1
