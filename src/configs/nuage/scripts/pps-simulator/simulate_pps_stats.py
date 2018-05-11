@@ -992,6 +992,37 @@ class SimulateNATTStats(object):
             write_data = []
         return natt_summary_cnt
 
+
+class SimulateIKEStats(object):
+    def __init__(self, flowData,ikeData):
+        self.nsgs = flowData["nsgs"]
+        self.def_ent_name = flowData["def_ent_name"]
+        self.es = flowData["es"]
+        self.es_index_prefix = flowData["es_index_prefix"]
+        self.srcUplinks = flowData["srcuplinks"]
+        self.destUplinks = flowData["destuplinks"]
+        self.tunnels = ikeData['tunnels']
+        self.urlFailureReasons = [
+            "DNS resolution failure ",
+            "TCP connect failure ",
+            "SSL Connect failure ",
+            "Request Timed Out ",
+            "HTTP Request send failure ",
+            "HTTP Response error with error Code"
+        ]
+
+    def get_urls(self):
+        urls = set(['google','apple','yahoo','gmail','nokia','microsoft','spotify','waymo','tesla',
+                'bloomberg','amazon','cisco','arista'])
+        urlinfo = []
+        for url in urls:
+            urlinfo.append(
+                {
+                    "UrlString":"http://{0}.com".format(url),
+                    "UrlUUID": uuid.uuid4()
+                }
+            )
+        return urlinfo
 def main():
     #  Load the configuration file
     config = ConfigParser.ConfigParser()
@@ -1012,6 +1043,8 @@ def main():
     defData["perf_mon_count"] = config.getint('default', 'perf_mon_count')
     #print config.getint('default', 'duc_count')
     defData["duc_count"] = config.getint('default', 'duc_count')
+    #Ike tunnel count, will be used for probe count as well
+    defData['ike_tunnel_count'] = config.getint('default','ike_tunnel_count')
     #print defData["duc_count"]
     defData['out_sla_app_count'] = config.getint('default','out_sla_apps')
     duration = config.get('default','duration')
@@ -1065,6 +1098,10 @@ def main():
         "perf_mons": perf_mons
     }
 
+    ikeData = {
+        'tunnels' : simData.getIkeTunnels()
+    }
+
     flow_stats = SimulateFlowStats(flowData, simData)
     sla_flows = flow_stats.generate_flow_stats(startTime, endTime,es_chunk_size)
 
@@ -1076,6 +1113,10 @@ def main():
 
     natt_stats = SimulateNATTStats(flowData)
     natt_stats.generate_natt_stats(startTime, endTime,es_chunk_size,natt_prob)
+
+    ike_stats = SimulateIKEStats(flowData,ikeData)
+    ike_stats.attachProbesToNsgs()
+    ike_stats.generate_ike_stats(startTime, endTime, es_chunk_size)
 
 
 if __name__ == '__main__':
