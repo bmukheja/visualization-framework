@@ -1023,6 +1023,15 @@ class SimulateIKEStats(object):
                 }
             )
         return urlinfo
+
+    def get_tier_urls(self):
+        urls = self.get_urls()
+        s = len(urls)
+        t1_count = randint(0,s+1)
+        t2_count = randint(0,s-t1_count)
+        tier1 = random.sample(urls,t1_count)
+        tier2 = random.sample(urls-set(tier1),t2_count)
+        return tier1,tier2
 def main():
     #  Load the configuration file
     config = ConfigParser.ConfigParser()
