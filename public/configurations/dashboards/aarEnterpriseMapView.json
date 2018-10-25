@@ -2,7 +2,7 @@
     "id": "aarEnterpriseMapView",
     "author": "Bharat Mukheja",
     "creationDate": "07/03/2018",
-    "title": "AAR Enterprise ({{enterpriseName}}) Map View",
+    "title": "Enterprise ({{enterpriseName}}) Map View",
     "visualizations": [
         { "id": "aar-enterprise-geomap",                    "x": 2,  "y": 0, "w": 10,  "h": 30, "minW": 9, "minH": 15, "static": true},
         { "id": "aar-enterprise-geomap-table",              "x": 0,  "y": 30, "w": 12,  "h": 15, "minW": 9, "minH": 15, "static": true},

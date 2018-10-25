@@ -1,7 +1,7 @@
 {
     "id": "aar-enterprise-geomap-donut",
     "graph": "PieGraph",
-    "title": "NSGs Health",
+    "title": "Health Summary",
     "description": "Shows all NSGs in the enterprise with their current state and information.\nThe information covers Bootstrap Status, Alarm Status and NSG Software Version.\n\nColor depiction -\n\nBlue: NSG is in Good Condition\nYellow: Bootstrap Status is not ACTIVE\n\n\n\nTo Exit this information, click anywhere inside this box or on the 'i' button again.",
     "author": "Bharat Mukheja",
     "creationDate": "03/13/2018",
@@ -46,7 +46,8 @@
             "circleSize": 5,
             "labelOffset": 2
         },
-        "fontColor": "#000000"
+        "fontColor": "#000000",
+        "fontSize": "5px"
     },
     "query": "aar-enterprise-geomap-donut"
 }
